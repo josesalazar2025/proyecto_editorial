@@ -9,10 +9,17 @@
 }
 
 :root {
-    --font-text: "Arial", sans-serif;
-    --font-titular: "Times New Roman", serif;
     scroll-behavior: smooth;
     height: 100%;
+    --font-text: "Arial", sans-serif;
+    --font-family: "Vina Sans", sans-serif;
+    --bg-color: #262626;
+    --bg-color2: rgb(127, 255, 212);
+    --bg-color3: rgb(16, 141, 108);
+    --font-color: #a32c2c;
+    --font-color2:  #d7ac61;
+    --font-color3: #cf4141;
+    --font-precio: #eee;
 }
 
 
@@ -22,7 +29,7 @@ body {
     font-family: var(--font-text);
     width: 100%;
     min-height: 100vh;
-    background-color: #262626;
+    background-color:var(--bg-color);
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 5vh 65vh 1fr 20vh;
@@ -34,7 +41,7 @@ body {
 }
 /*NAVEGADOR PRINCIPAL*/
 nav{
-    background-color: #262626;
+    background-color: var(--bg-color);
     grid-area: navegador;
     justify-content: center;
     align-items: center;
@@ -52,8 +59,8 @@ nav>p{
     padding-left: 2rem;
     font-weight: 100;
     width: 50%;
-    color: #a32c2c;
-    font-family: "Vina Sans", sans-serif;
+    color: var(--font-color);
+    font-family: var(var(--font-family));
 }
 
 nav>ul{
@@ -69,25 +76,25 @@ ul li{
 
 li a{
     text-decoration: none;
-    color: #d7ac61;
+    color: var(--font-color2);
     font-weight: 600;
 }
 
 a:hover{
-    color: #cf4141;
+    color: var(--font-color3);
 }
 
 header{
-    background-image: url(../img/ejemplo-header.webp);
+    background-image: url(../img/banner.jpg);
     background-position:center bottom;
-    background-color: black;
+    background-color:var(--bg-color);
     grid-area: header;
     display: grid;
 }
 
 h1{
-    font-family: "Vina Sans", sans-serif;
-    color: #cf4141;
+    font-family: var(--font-family);
+    color:var(--font-color3);
     font-size: 6rem;
     justify-self: flex-end;
     align-self: flex-end;
@@ -98,8 +105,8 @@ h1{
 
 h2{
     font-weight: 100;
-    font-family: "Vina Sans", sans-serif;
-    color: #d7ac61;
+    font-family: var(--font-family);
+    color: var(--font-color2);
     font-size: 2rem;
 }
 
@@ -155,19 +162,19 @@ main{
     border-radius: 1rem;
     background-color: transparent;
     padding: 0.5rem;
-    border: 1px solid #9e9e9ea2;
-    color: #eee;
+    border: 1px solid var(--font-precio);
+    color: var(--font-precio);
 }
 
 .tarjeta-precio>div button:hover{
     cursor: pointer;
-    background-color: rgb(16, 141, 108);
-    color: #eee;
+    background-color: var(--bg-color3);
+    color:var(--font-precio);
     transition: ease 0.4s;
 }
 
 .tarjeta-precio>div p{
-    color: #eee;
+    color: var(--font-precio);
     font-weight: 900;
 }
 
@@ -175,7 +182,7 @@ main{
     display: none;
     align-self: center;
     position: absolute;
-    background-color: aquamarine;
+    background-color:var(--bg-color2);
     z-index: 100;
 }
 
@@ -189,7 +196,7 @@ main{
 /*FOOTER*/
 footer{
 
-    background-color: rgb(49, 51, 51);
+    background-color: var(--bg-color);
     grid-area: footer;
     justify-items: center;
     align-content: center;
