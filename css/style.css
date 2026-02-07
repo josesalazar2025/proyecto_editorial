@@ -82,10 +82,12 @@ li a{
 
 a:hover{
     color: var(--font-color3);
+    cursor: pointer;
 }
 
 header{
     background-image: url(../img/banner.jpg);
+    background-size: cover;
     background-position:center bottom;
     background-color:var(--bg-color);
     grid-area: header;
@@ -110,8 +112,8 @@ h2{
     font-size: 2rem;
 }
 
-/*MAIN*/
 
+/*MAIN*/
 main{
     display: grid;
     grid-area: main;
@@ -120,9 +122,8 @@ main{
     overflow: hidden;
 }
 
+
 /* TOP SELLERS / COLLECTORS*/
-
-
 #contenedor-top-sellers,
 #contenedor-collector-items{
     margin-top: 2rem;   
@@ -195,15 +196,15 @@ main{
 
 /*FOOTER*/
 footer{
-
+    color: var(--font-precio);
     background-color: var(--bg-color);
     grid-area: footer;
     justify-items: center;
     align-content: center;
 }
 
-/*MEDIA QUERIES*/
 
+/*MEDIA QUERIES*/
 @media(min-width: 1024px){
     #contenedor-top-sellers,
     #contenedor-collector-items{
