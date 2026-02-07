@@ -198,9 +198,9 @@ main{
 
 
 /* FORM /INPUTS */
-
 fieldset{
     border: none;
+    text-transform: uppercase;
 }
 
 label{
@@ -213,6 +213,19 @@ input,textarea{
     border-bottom: 1px solid var(--font-precio);
 }
 
+
+fieldset button{
+    border: none;
+    color: var(--font-color2);
+    background-color: var(--bg-color);
+
+}
+
+fieldset button:hover{
+    color: var(--bg-color);
+    background-color: var(--font-color2);
+}
+
 /*FOOTER*/
 footer{
     color: var(--font-precio);
@@ -222,6 +235,9 @@ footer{
     align-content: center;
 }
 
+footer img{
+    border-radius: 60px;
+}
 
 /*MEDIA QUERIES*/
 @media(min-width: 1024px){
