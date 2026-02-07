@@ -25,7 +25,7 @@ body {
     background-color: #f8f2e9;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 5vh 55vh 1fr 20vh;
+    grid-template-rows: 5vh 65vh 1fr 20vh;
     grid-template-areas:
         "navegador"
         "header"
@@ -34,7 +34,7 @@ body {
 }
 /*NAVEGADOR PRINCIPAL*/
 nav{
-    background-color: grey;
+    background-color: #333;
     grid-area: navegador;
     justify-items: center;
     align-content: center;
@@ -49,19 +49,30 @@ ul li{
 
 li a{
     text-decoration: none;
-    color: #333;
+    color: #eee;
     font-weight: 600;
 }
 
 a:hover{
-    color: black;
+    color: rgb(34, 215, 37);
 }
 
 header{
-
+    background-image: url(../img/ejemplo-header.webp);
+    background-position:center bottom;
     background-color: black;
     grid-area: header;
+    display: grid;
 }
+
+h1{
+    display: none;
+    color: #ebebeb;
+    font-size: 6rem;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
 
 /*MAIN*/
 
@@ -113,6 +124,11 @@ main{
     border: none;
     background-color: green;
     color: white;
+}
+
+.tarjeta-precio>div button:hover{
+    cursor: pointer;
+    background-color: rgb(101, 148, 29);
 }
 
 .tarjeta-precio>div p{
