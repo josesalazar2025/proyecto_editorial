@@ -22,7 +22,7 @@ body {
     font-family: var(--font-text);
     width: 100%;
     min-height: 100vh;
-    background-color: #f8f2e9;
+    background-color: #262626;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 5vh 65vh 1fr 20vh;
@@ -34,12 +34,32 @@ body {
 }
 /*NAVEGADOR PRINCIPAL*/
 nav{
-    background-color: #333;
+    background-color: #262626;
     grid-area: navegador;
-    justify-items: center;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
     position: sticky;
     top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-self: center;   
+    border-radius: 1rem;
+}
+
+nav>p{
+    font-size: 2.5rem;
+    padding-left: 2rem;
+    font-weight: 100;
+    width: 50%;
+    color: #a32c2c;
+    font-family: "Vina Sans", sans-serif;
+}
+
+nav>ul{
+    justify-self: right;
+    width: 100%;
+
 }
 
 ul li{
@@ -49,12 +69,12 @@ ul li{
 
 li a{
     text-decoration: none;
-    color: #eee;
+    color: #d7ac61;
     font-weight: 600;
 }
 
 a:hover{
-    color: rgb(34, 215, 37);
+    color: #cf4141;
 }
 
 header{
@@ -66,13 +86,22 @@ header{
 }
 
 h1{
-    display: none;
-    color: #ebebeb;
+    font-family: "Vina Sans", sans-serif;
+    color: #cf4141;
     font-size: 6rem;
     justify-self: flex-end;
     align-self: flex-end;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    font-weight: 100;
 }
 
+h2{
+    font-weight: 100;
+    font-family: "Vina Sans", sans-serif;
+    color: #d7ac61;
+    font-size: 2rem;
+}
 
 /*MAIN*/
 
@@ -89,9 +118,11 @@ main{
 
 #contenedor-top-sellers,
 #contenedor-collector-items{
-    max-width: 95%;
+    margin-top: 2rem;   
+    margin-bottom: 2rem;
+    max-width: 100%;
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     flex-wrap: wrap;
     justify-content: space-around;
     justify-self: center;
@@ -107,7 +138,9 @@ main{
 .tarjeta-precio{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 0.5rem;
+    flex: 1 1 5%;
 }
 .tarjeta-precio>div{
     display: flex;
@@ -117,26 +150,33 @@ main{
 
 .tarjeta-precio>div button{
     text-align: center;
-    width: 55%;
+    width: 60%;
     justify-self: center;
     border-radius: 1rem;
+    background-color: transparent;
     padding: 0.5rem;
-    border: none;
-    background-color: green;
-    color: white;
+    border: 1px solid #9e9e9ea2;
+    color: #eee;
 }
 
 .tarjeta-precio>div button:hover{
     cursor: pointer;
-    background-color: rgb(101, 148, 29);
+    background-color: rgb(16, 141, 108);
+    color: #eee;
+    transition: ease 0.4s;
 }
 
 .tarjeta-precio>div p{
+    color: #eee;
     font-weight: 900;
 }
 
 .tarjeta-precio h2{
     display: none;
+    align-self: center;
+    position: absolute;
+    background-color: aquamarine;
+    z-index: 100;
 }
 
 #banner-coleccionistas img{
@@ -148,6 +188,7 @@ main{
 
 /*FOOTER*/
 footer{
+
     background-color: rgb(49, 51, 51);
     grid-area: footer;
     justify-items: center;
@@ -159,10 +200,19 @@ footer{
 @media(min-width: 1024px){
     #contenedor-top-sellers,
     #contenedor-collector-items{
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
+        max-width: 95%;
+        gap: 3rem;
         margin-top: 5rem;   
-        margin-bottom: 5rem;
+        margin-bottom: 10rem;
     }
+
+   
 }
 
+
+@media(min-width: 768px){
+    #contenedor-top-sellers,
+    #contenedor-collector-items{
+        flex-direction: row;
+    }
+}
