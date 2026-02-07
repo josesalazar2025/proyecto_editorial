@@ -25,19 +25,21 @@ body {
     background-color: #f8f2e9;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 5vh 35vh 1fr 20vh;
+    grid-template-rows: 5vh 55vh 1fr 20vh;
     grid-template-areas:
         "navegador"
         "header"
         "main"
         "footer";
 }
-
+/*NAVEGADOR PRINCIPAL*/
 nav{
-    background-color: rgb(198, 199, 199);
+    background-color: grey;
     grid-area: navegador;
     justify-items: center;
     align-content: center;
+    position: sticky;
+    top: 0;
 }
 
 ul li{
@@ -56,49 +58,79 @@ a:hover{
 }
 
 header{
-    background-image: url(https://lorem.cat/1920x300);
+
     background-color: black;
     grid-area: header;
 }
 
+/*MAIN*/
+
 main{
-    background-color: antiquewhite;
+    display: grid;
     grid-area: main;
-    width: 67%;
+    width: 70%;
     justify-self: center;
     overflow: hidden;
 }
 
+/* TOP SELLERS / COLLECTORS*/
 
-section>section{
+
+#contenedor-top-sellers,
+#contenedor-collector-items{
+    max-width: 95%;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-self: center;
+}
+
+#contenedor-top-sellers>h2,
+#contenedor-collector-items>h2{
+    display: inline-block;
+    width: 100%;
+
+}
+
+.tarjeta-precio{
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    gap: 0.5rem;
+}
+.tarjeta-precio>div{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-section>section>div button{
+.tarjeta-precio>div button{
     text-align: center;
-    width: 47%;
+    width: 55%;
     justify-self: center;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: green;
+    color: white;
 }
 
-
-section>section>div button:first-of-type{
-    background-color: aqua;
+.tarjeta-precio>div p{
+    font-weight: 900;
 }
 
-
-main>section{
-    display: grid;
-
+.tarjeta-precio h2{
+    display: none;
 }
 
-main>figure{
+#banner-coleccionistas img{
     margin-top: 5rem;
     justify-self: center;
+    max-width: 100%;
 }
 
 
+/*FOOTER*/
 footer{
     background-color: rgb(49, 51, 51);
     grid-area: footer;
@@ -106,16 +138,15 @@ footer{
     align-content: center;
 }
 
-
+/*MEDIA QUERIES*/
 
 @media(min-width: 1024px){
-    main>section{
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        margin-top: 5rem;
-        align-items: center;
+    #contenedor-top-sellers,
+    #contenedor-collector-items{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        margin-top: 5rem;   
         margin-bottom: 5rem;
-        
     }
 }
 
