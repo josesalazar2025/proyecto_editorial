@@ -10,6 +10,7 @@
 }
 
 :root {
+    font-size: 16px;
     scroll-behavior: smooth;
     height: 100%;
     --font-text: "Roboto", sans-serif;
@@ -22,6 +23,22 @@
     --font-color2:  #d7ac61;
     --font-color3: #cf4141;
     --font-precio: rgba(187, 185, 185, 0.913);
+
+    --h1-min: 2rem;
+    --h1-ideal: 1.147rem + 3.210vw;
+    --h1-max: 5rem;
+
+    --nav-title-min: 2rem;
+    --nav-title-ideal: 1.858rem + 0.535vw;
+    --nav-title-max: 2.5rem;
+
+    --h2-section-min: 1.4rem;
+    --h2-section-ideal: 1.229rem + 0.642vw;
+    --h2-section-max: 2rem;
+
+    --p-min: 1rem;
+    --p-ideal: 0.964rem + 0.134vw;
+    --p-max: 1.125rem;
 }
 
 
@@ -42,7 +59,6 @@ body {
         "footer";
 }
 
-
 /*NAVEGADOR PRINCIPAL*/
 nav{
     text-transform: uppercase;
@@ -62,7 +78,7 @@ nav{
 }
 
 nav>p{
-    font-size: 2rem;
+    font-size: clamp(var(--nav-title-min), var(--nav-title-ideal), var(--nav-title-max));
     padding-left: 1.2rem;
     font-weight: 100;
     width: 100%;
@@ -107,7 +123,7 @@ header{
 h1{
     font-family: var(--font-titular);
     color:var(--font-color3);
-    font-size: 2rem;
+    font-size: clamp(var(--h1-min), var(--h1-ideal), var(--h1-max));
     justify-self: flex-end;
     align-self: flex-end;
     padding-bottom: 0.5rem;
@@ -156,7 +172,7 @@ main{
 #contenedor-collector-items>h2{
     display: inline-block;
     width: 100%;
-    font-size: 1.4rem;
+    font-size: clamp(var(--h2-section-min), var(--h2-section-ideal), var(--h2-section-max));
 
 }
 
@@ -297,7 +313,7 @@ footer img{
     }
 
     .tarjeta-precio{
-        flex: 1 1 20%;
+        flex: 1 1 15%;
         margin-bottom: 3rem;
     }
 
@@ -321,13 +337,11 @@ footer img{
     #contenedor-collector-items>h2{
         display: inline-block;
         width: 100%;
-        font-size: 2rem;
 
     }
 
 
     nav>p{
-        font-size: 2.5rem;
         padding-left: 2rem;
         font-weight: 100;
         width: 50%;
@@ -337,7 +351,6 @@ footer img{
     h1{
         font-family: var(--font-titular);
         color:var(--font-color3);
-        font-size: 5rem;
         justify-self: flex-end;
         align-self: flex-end;
         padding-right: 2rem;
