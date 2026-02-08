@@ -106,10 +106,14 @@ li a{
     font-weight: 600;
 }
 
-a:hover{
+nav li a:hover{
     color: var(--font-color3);
     cursor: pointer;
 }
+
+nav li a[aria-current="page"]{                                               
+    color: var(--font-color3);                                                                             
+  }      
 
 header{
     background-image: url(../img/banner.jpg);
@@ -144,7 +148,6 @@ h2{
     color: var(--font-color2);
 }
 
-
 /*MAIN*/
 main{
     display: grid;
@@ -153,7 +156,6 @@ main{
     justify-self: center;
     overflow: hidden;
 }
-
 
 /* TOP SELLERS / COLLECTORS*/
 #contenedor-top-sellers,
