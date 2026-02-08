@@ -63,7 +63,7 @@ nav>p{
     font-weight: 100;
     width: 50%;
     color: var(--font-color);
-    font-family: var(var(--font-family));
+    font-family: var(--font-family);
 }
 
 nav>ul{
@@ -236,6 +236,13 @@ footer{
    
 }
 
+
+@media(min-width: 768px){
+    #contenedor-top-sellers,
+    #contenedor-collector-items{
+        flex-direction: row;
+    }
+}
 
 @media(min-width: 768px){
     #contenedor-top-sellers,
