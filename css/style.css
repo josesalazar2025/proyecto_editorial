@@ -15,6 +15,7 @@
     height: 100%;
     --font-text: "Roboto", sans-serif;
     --font-titular: "Vina Sans", sans-serif;
+    --font-titular2: "New Amsterdam", sans-serif;
     --bg-color: #262626;
     --bg-color2: rgb(127, 255, 212);
     --bg-color3: rgb(16, 141, 108);
@@ -51,7 +52,7 @@ body {
     background-color:var(--bg-color);
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 5vh 65vh 1fr 20vh;
+    grid-template-rows: 5vh 65vh 1fr 25vh;
     grid-template-areas:
         "navegador"
         "header"
@@ -144,16 +145,30 @@ nav span.material-symbols-outlined{
 
 
 h2{
+    /* text-shadow: 0.5px 0.5px 8px var(--font-color3); */
     font-weight: 100;
-    font-family: var(--font-titular);
+    font-family: var(--font-titular2);
     color: var(--font-color2);
     margin-bottom: 1rem;
     text-justify: auto;
+    margin-bottom: 1rem;
+    text-justify: auto;
+    font-weight: 700;
+    
+
 }
 
+
 h3{
-    color: var(--font-precio)
+    color: var(--font-color2);
+    font-family: var(--font-titular2);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--font-color2);
+    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
 }
+
+
 
 /*MAIN*/
 main{
@@ -169,7 +184,6 @@ main{
 .contenedor, 
 .contenedor-talentos{
     margin-top: 2rem;   
-    margin-bottom: 2rem;
     max-width: 100%;
     display: flex;
     gap: 2rem;
@@ -218,7 +232,12 @@ main{
 .noticia figure>img{
     width: 100%;
     object-fit: contain;
-    box-shadow: 2px 1px 4px var(--font-color3);
+}
+.tarjeta-precio figure>img:hover,
+.noticia figure>img:hover{
+    box-shadow: 1px 1px 20px 1px var(--font-color3);
+    transition: ease 0.7s;
+    cursor: pointer;
 }
 
 .tarjeta-precio>div button, .contenedor>.noticia button{
@@ -267,54 +286,30 @@ main{
 
 
 /* CATALOGO */
-
-
 .catalogo h3{
-    color: var(--font-color2);
-    text-transform: uppercase;
-    border-bottom: 2px solid var(--font-color2);
-    margin-bottom: 0.8rem;
-    margin-top: 0.8rem;
-}
-
-
-.catalogo div{
-    border: 1px solid crimson;
-    max-width: 100%;
-    max-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: left;
-}
-
-.catalogo figure{
-<<<<<<< HEAD
-    border: 1px solid crimson;
-=======
-    justify-content: center;
-    align-items: center;
-}
-
-.catalogo div figure img{
->>>>>>> refs/remotes/origin/main
+    margin: 0;
+    padding: 0;
     width: 100%;
-    font-size: clamp(var(--h3-section-min), var(--h3-section-ideal), var(--h3-section-max));
 }
 
-<<<<<<< HEAD
-.catalogo figure img{
-    max-width: 100%;
-    max-height: 100%;
+.catalogo section:not(h2){
+    display: inline-block;
 }
 
-=======
->>>>>>> refs/remotes/origin/main
-.catalogo div figcaption{
-    color: var(--font-color2);
-    font-weight: bolder;
-    padding: 0.5rem;
+.catalogo section div {
+    display: block;
+    /* max-width: 40%;
+    max-height: 50%; */
+    object-fit: contain;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
 }
+
+.catalogo section div:nth-child(odd){
+    border-left: 2px solid var(--font-color2);
+}
+
 
 .catalogo section div p{
     color: var(--font-precio);
@@ -325,19 +320,18 @@ main{
 
 }
 
-.catalogo section div p span:first-child{
-    font-weight: bold;
+.catalogo section div button{
+    width:100%;
 }
 
-
-.catalogo section div button{
+/* .catalogo section div button{
     color: var(--font-color2);
     background-color: transparent;
     font-weight: bold;
     border: none;
     margin-bottom: 0.4rem;
     padding-left: 0.5rem;
-}
+} */
 
 
 /* CONTACTO FORM /INPUTS */
@@ -402,10 +396,9 @@ fieldset button:hover{
     background-color: var(--bg-color);
 }
 
-<<<<<<< HEAD
-=======
-/*TALENTOS*/
 
+
+/*TALENTOS*/
 .talento{
     display: flex;
     flex-direction: column;
@@ -413,10 +406,12 @@ fieldset button:hover{
     padding: 1rem;
     margin-bottom: 2rem;
     color: var(--border-color);
+    
 }
 
 .contenedor-talentos{
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     flex-direction: column;
     flex-wrap: wrap;
@@ -447,7 +442,6 @@ fieldset button:hover{
 }
 
 
->>>>>>> refs/remotes/origin/main
 
 /*FOOTER*/
 footer{
@@ -455,30 +449,66 @@ footer{
     background-color: #373636;
     grid-area: footer;
     display: flex;
-<<<<<<< HEAD
-=======
-    align-items: center;
->>>>>>> refs/remotes/origin/main
-    align-content: space-evenly;
+    align-content: center;
     justify-content: center;
     margin-top: 1rem;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#contenedor-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    
+}
+footer ul>li{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+footer ul>li a{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    align-self: flex-start;
+    color: var(--border-color);
+}
+
+#contenedor-footer>h2{
+    align-self: center;
+    color: var(--font-color);
+    font-family: var(--font-titular);
+    
+}
+#contenedor-footer>div{
+    display: flex;
+    flex-direction: column ;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#contenedor-footer>div h3{
+    margin: 0;
+    text-decoration: none;
+    border: none
+}
+
+footer>p{
+    align-self: center;
+    font-size: 0.7rem;
+    color: var(--border-color);
 }
 
 
-<<<<<<< HEAD
-footer img{
-    border-radius: 5px;
-    width: 90%;
-=======
-footer>figure img{
-    border-radius: 60px;
-    width: 80%;
->>>>>>> refs/remotes/origin/main
-    height: 45%;
-}
-
+/*M: Hay que mirar los contenedores del catalago porque tienen mucho MARGIN */
 /*MEDIA-Q TABLET*/
 @media(min-width: 768px){
+
+
     .contenedor{
         flex-direction: row;
         max-width: 100%;
@@ -617,14 +647,12 @@ footer>figure img{
     main{
         width: 70%;
     }
-<<<<<<< HEAD
-}
-=======
 
     .talento{
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         padding: 1rem;
         margin-bottom: 2rem;
         color: var(--border-color);
@@ -638,8 +666,10 @@ footer>figure img{
     }
 
     .talento>figure{
+        
         min-width: 10%;
-        flex: 1 0 20%;
+        max-width: 15%;
+        flex: 1 1 20%;
     }
     .talento>figure img{
         max-width: 100%;
@@ -649,6 +679,7 @@ footer>figure img{
 
     .talento>div{
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         padding-left: 2rem;
     }
@@ -657,5 +688,9 @@ footer>figure img{
         display: none;
     }
 
+    .talento>div{
+        width: 60%;
+    }
+
 }
->>>>>>> refs/remotes/origin/main
+
