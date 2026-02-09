@@ -406,9 +406,11 @@ fieldset button{
 }
 
 fieldset button:hover{
-    color: var(--font-color);
-    background-color: var(--bg-color);
+    color: var(--font-precio);
+    background-color: var(--bg-color3);
 }
+
+/* Añadir ACTION y INPUT FIELD COLOR */
 
 
 
