@@ -14,7 +14,8 @@
     scroll-behavior: smooth;
     height: 100%;
     --font-text: "Roboto", sans-serif;
-    --font-titular: "Vina Sans", sans-serif;
+    --font-titular: "New Amsterdam", sans-serif;
+    --font-titular2: "Rubik, sans-serif";
     --bg-color: #262626;
     --bg-color2: rgb(127, 255, 212);
     --bg-color3: rgb(16, 141, 108);
@@ -144,14 +145,29 @@ nav span.material-symbols-outlined{
 
 
 h2{
+    /* text-shadow: 0.5px 0.5px 8px var(--font-color3); */
     font-weight: 100;
     font-family: var(--font-titular);
     color: var(--font-color2);
+    margin-bottom: 1rem;
+    text-justify: auto;
+    font-weight: 700;
+    
+  
 }
 
+
 h3{
-    color: var(--font-precio)
+    font-size: clamp(var(--h3-section-min), var(--h3-section-ideal), var(--h3-section-max));
+    color: var(--font-color2);
+    font-family: var(--font-titular);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--font-color2);
+    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
 }
+
+
 
 /*MAIN*/
 main{
@@ -167,7 +183,6 @@ main{
 .contenedor, 
 .contenedor-talentos{
     margin-top: 2rem;   
-    margin-bottom: 2rem;
     max-width: 100%;
     display: flex;
     gap: 2rem;
@@ -216,7 +231,12 @@ main{
 .noticia figure>img{
     width: 100%;
     object-fit: contain;
-    box-shadow: 2px 1px 4px var(--font-color3);
+}
+.tarjeta-precio figure>img:hover,
+.noticia figure>img:hover{
+    box-shadow: 1px 1px 20px 1px var(--font-color3);
+    transition: ease 0.7s;
+    cursor: pointer;
 }
 
 .tarjeta-precio>div button, .contenedor>.noticia button{
@@ -265,39 +285,39 @@ main{
 
 
 /* CATALOGO */
-section h3{
-    color: var(--font-color2);
-    font-family: var(--font-text);
-    text-transform: uppercase;
-    font-weight: bolder;
-    border-bottom: 2px solid var(--font-color2);
-    margin-bottom: 0.7rem;
-    margin-top: 1rem;
 
-}
-
-.catalogo section div {
-    display: inline-block;
+.catalogo div{
     border: 1px solid crimson;
-    max-width: 45%;
-    min-height: 55vh;
-    gap: 3rem;
-
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: left;
 }
 
 .catalogo figure{
+    border: 1px solid crimson;
     justify-content: center;
     align-items: center;
 }
 
 .catalogo div figure img{
     width: 100%;
-    height: 100%;
+    
 }
+
+
+.catalogo figure img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
 
 .catalogo div figcaption{
     color: var(--font-color2);
     font-weight: bolder;
+    padding: 0.5rem;
 }
 
 .catalogo section div p{
@@ -305,18 +325,38 @@ section h3{
     font-family: var(--font-text);
     margin-bottom: 0.2rem;
     text-align: left;
+    padding-left: 0.5rem;
+
 }
 
-section div button{
+.catalogo section div p span:first-child{
+    font-weight: bold;
+}
+
+
+.catalogo section div button{
     color: var(--font-color2);
     background-color: transparent;
-    text-transform: uppercase;
+    font-weight: bold;
     border: none;
     margin-bottom: 0.4rem;
+    padding-left: 0.5rem;
 }
 
 
-/* FORM /INPUTS */
+/* CONTACTO FORM /INPUTS */
+.contacto section:first-child{
+    margin-bottom: 1.2rem;
+}
+
+.contacto iframe{
+    width: 100%;
+}
+
+.contacto p{
+    color: var(--font-precio);
+}
+
 fieldset{
     border: none;
     text-transform: uppercase;
@@ -327,23 +367,45 @@ label{
     display: block;
 }
 
-input,textarea{
-    border: none;
-    border-bottom: 1px solid var(--font-precio);
+
+input{
+    width: 100%;
+    padding: 0.5rem;
 }
 
+::placeholder{
+    text-transform: uppercase;
+}
+
+input,textarea{
+    color: var(--font-precio);
+    border: none;
+    border-bottom: 1px solid var(--font-precio);
+    background-color: var(--bg-color);
+    margin-bottom: 0.5rem;
+}
+
+textarea{
+    border-left: 1px solid var(--font-precio);
+}
 
 fieldset button{
+    color: var(--bg-color);
+    background-color: var(--font-color2);
     border: none;
-    color: var(--font-color2);
-    background-color: var(--bg-color);
-
+    border-radius: 4px;
+    padding: 1rem;
+    width: 100%;
+    padding-left: 0;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
 fieldset button:hover{
-    color: var(--bg-color);
-    background-color: var(--font-color2);
+    color: var(--font-color);
+    background-color: var(--bg-color);
 }
+
 
 /*TALENTOS*/
 
@@ -354,10 +416,12 @@ fieldset button:hover{
     padding: 1rem;
     margin-bottom: 2rem;
     color: var(--border-color);
+    
 }
 
 .contenedor-talentos{
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     flex-direction: column;
     flex-wrap: wrap;
@@ -387,8 +451,6 @@ fieldset button:hover{
     font-size: var(--p-min), var(--p-ideal), var(--p-max);
 }
 
-
-
 /*FOOTER*/
 footer{
     color: var(--font-precio);
@@ -401,6 +463,11 @@ footer{
     margin-top: 1rem;
 }
 
+
+footer img{
+    border-radius: 5px;
+    width: 90%;
+}
 
 footer>figure img{
     border-radius: 60px;
@@ -416,7 +483,7 @@ footer>figure img{
         flex: 1 1 25%;
         margin-bottom: 3rem;
     }
-      main{
+    main{
         width: 80%;
     }
 
@@ -553,6 +620,7 @@ footer>figure img{
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         padding: 1rem;
         margin-bottom: 2rem;
         color: var(--border-color);
@@ -566,8 +634,10 @@ footer>figure img{
     }
 
     .talento>figure{
+        
         min-width: 10%;
-        flex: 1 0 20%;
+        max-width: 15%;
+        flex: 1 1 20%;
     }
     .talento>figure img{
         max-width: 100%;
@@ -577,12 +647,17 @@ footer>figure img{
 
     .talento>div{
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         padding-left: 2rem;
     }
 
     .talento>h2{
         display: none;
+    }
+
+    .talento>div{
+        width: 60%;
     }
 
 }
