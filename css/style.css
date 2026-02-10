@@ -185,8 +185,10 @@ small{
 
 p{
     font-size: var(--p-min), var(--p-ideal), var(--p-max);
+    color: var(--font-precio);
 
 }
+
 h2{
     /* text-shadow: 0.5px 0.5px 8px var(--font-color3); */
     font-weight: 100;
@@ -220,14 +222,28 @@ main{
     display: grid;
     grid-area: main;
     width: 90%;
+    height: 100vh;
     justify-self: center;
     overflow: hidden;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
+    /* overflow-y: auto;
+    scroll-snap-type: y mandatory; */
 }
 
-main p {
-    color: var(--font-precio);
+/* SECCIONES */
+/* M: He añadido scroll a las secciones */
+/* main section{
+    scroll-snap-align: start;
+    scrollbar-width: thin;
 }
+
+main section::-webkit-scrollbar{
+    height: 2px;
+}
+
+main section::-webkit-scrollbar-track{
+    background: var(--bg-color);
+} */
 
 #intro{
     margin-top: 4rem;
@@ -380,31 +396,23 @@ main p {
 
 
 .catalogo section div p{
-    color: var(--font-precio);
-    font-family: var(--font-text);
     margin-bottom: 0.2rem;
     text-align: left;
     padding-left: 0.5rem;
-
 }
 
 .catalogo section div button{
     width:48%;
 }
 
-/* .catalogo section div button{
-    color: var(--font-color2);
-    background-color: transparent;
-    font-weight: bold;
-    border: none;
-    margin-bottom: 0.4rem;
-    padding-left: 0.5rem;
-} */
-
 
 /* CONTACTO FORM /INPUTS */
 .contacto section:first-child{
     margin-bottom: 1.2rem;
+}
+
+.contacto section:last-child{
+    width: 40%;
 }
 
 .contacto iframe{
