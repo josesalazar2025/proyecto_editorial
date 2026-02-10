@@ -633,9 +633,14 @@ footer>p{
     }
 
     .talento>figure{
-        min-width: 10%;
+        min-width: 200px;
         flex: 1 0 25%;
     }
+
+    .talento>figure img{
+        min-width: 200px;
+    }
+
     .talento>div{
         padding-left: 2rem;
     }
@@ -716,20 +721,24 @@ footer>p{
 
     .contenedor-talentos{
         align-items: center;
-        gap: 1rem;
+        gap: 5rem;
         flex-direction: column;
         flex-wrap: wrap;
     }
 
     .talento>figure{
-        
-        min-width: 10%;
-        max-width: 15%;
+        max-width: 30%;
         flex: 1 1 20%;
     }
+
+    .talento>figure img{
+        min-width: 200px;
+    }
+
     .talento>div{
+        align-self: flex-start;
         flex-wrap: wrap;
-        width: 60%;
+        width: 50%;
     }
 
     #intro>button{
