@@ -300,13 +300,6 @@ main p {
 
 }
 
-img:hover {
-    /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    -webkit-filter: hue-rotate(240deg) saturate(3.3) grayscale(50%);
-    /* FF 35+ */
-    filter: hue-rotate(240deg) saturate(3.3) grayscale(50%);
-}
-
 .tarjeta-revista figure>img,
 .noticia figure>img{
     width: 100%;
