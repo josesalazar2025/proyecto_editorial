@@ -319,13 +319,16 @@ main{
 
 }
 
-.tarjeta-revista figure>img,
+.tarjeta-revista figure>img{
+    width: 100%;
+    object-fit: contain;
+}
+
 .noticia figure>img{
     width: 100%;
     object-fit: cover;
     aspect-ratio: 16/9;
     object-position: center top;
-    
 }
 
 main figure>img{
