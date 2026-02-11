@@ -19,12 +19,12 @@
     --bg-color: #262626;
     --bg-color2: rgb(127, 255, 212);
     --bg-color3: rgb(16, 141, 108);
-    --border-color: rgba(139, 139, 139, 0.758);
+    --border-color: rgba(167, 167, 167, 0.758);
     --font-color: #ca3737;
     --font-color2:  #f7c973;
     --font-color3: #e64949;
-    --font-gris: rgb(119, 119, 119);
-    --font-gris-claro: rgb(186, 186, 186);
+    --font-gris: rgb(133, 133, 133);
+    --font-gris-claro: rgb(202, 202, 202);
 
     --h1-min: 2rem;
     --h1-ideal: 1.400rem + 3.000vw;
@@ -374,12 +374,12 @@ main figure>img{
 /*FILTROS PARA IMAGENES-HACER PRUEBAS, NO ME CONVENCEN TANTO*/
 
 /* .tarjeta-revista figure>img {
-  filter: sepia(10%) saturate(100%) hue-rotate(-60deg);
-  transition: filter 0.4s ease;
+    filter: sepia(10%) saturate(100%) hue-rotate(-60deg);
+    transition: filter 0.4s ease;
 }
 
 .tarjeta-revista figure>img:hover {
-  filter: none;
+    filter: none;
 } */
 
 .tarjeta-revista figure>img:hover,
@@ -493,40 +493,41 @@ button:hover{
 }
 
 
-
 /* CONTACTO FORM /INPUTS */
+.contacto form{
+    border: 1px solid crimson;
+    object-fit: contain;
+}
 .contacto section:first-child{
     margin-bottom: 1.2rem;
+    width: 45%;
 }
 
 .contacto section:last-child{
-    width: 100%;
+    width: 45%;
 }
 
 .contacto p{
-    color: var(--font-gris);
+    color: var(--font-gris-claro);
     font-weight: bold;
-}
-
-form{
-    width: 80%;
 }
 
 
 fieldset{
     border: none;
     text-transform: uppercase;
-
 }
 
 label{
-    color: var(--font-gris);
+    color: var(--font-gris-claro);
     display: block;
+    margin-bottom: 0.1rem;
 }
 
 input{
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.6rem;
+    
 }
 
 ::placeholder{
@@ -542,11 +543,15 @@ input,textarea{
 }
 
 textarea{
-    border-left: 1px solid var(--font-gris);
+    border-left: 1px solid var(--font-gris-claro);
     
 }
 
 fieldset button{
+    width: 100%;
+}
+
+/* fieldset button{
     color: var(--bg-color);
     background-color: var(--font-color2);
     border: none;
@@ -562,7 +567,7 @@ fieldset button{
 fieldset button:hover{
     color: var(--font-gris-claro);
     background-color: var(--bg-color3);
-}
+} */
 
 .contacto address{
     border-left: 2px solid var(--font-color2);
