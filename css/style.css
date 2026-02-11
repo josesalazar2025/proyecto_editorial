@@ -343,7 +343,7 @@ main{
     transition: box-shadow 1s ease-in-out;
 }
 
-.noticia figure>img{
+.noticia figure>img, .noticia figure>iframe{
     width: 100%;
     object-fit: cover;
     aspect-ratio: 16/9;
