@@ -338,6 +338,7 @@ main{
     padding-right: 0.3rem;
     padding-bottom: 0.3rem;
     text-align: right;
+    color: var(--font-gris-claro);
 
 }
 
@@ -469,6 +470,7 @@ button:hover{
 
 
 .catalogo section div p{ 
+    color: var(--font-gris-claro);
     margin-bottom: 0.2rem;
     text-align: left;
     padding-left: 0.5rem;
@@ -802,7 +804,7 @@ footer>p{
         }
 
     .contenedor-talentos{
-        align-items: center;
+        align-items: flex-start;
         gap: 5rem;
         flex-direction: column;
         flex-wrap: wrap;
