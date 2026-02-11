@@ -181,6 +181,10 @@ small{
     font-size: 0.7rem;
 }
 
+cite{
+    font-style: normal;
+}
+
 p{
     font-size: clamp(var(--p-min), var(--p-ideal), var(--p-max));
 }
@@ -318,7 +322,9 @@ main{
 .tarjeta-revista figure>img,
 .noticia figure>img{
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    object-position: center top;
     
 }
 
