@@ -160,9 +160,20 @@ header{
     scroll-snap-align: start;
 }
 
-.header-slider img:last-child,.header-slider img:nth-child(2){
-    object-position: 70%;
+#shila{
+    object-position: 75%;
 }
+
+#blue{
+    object-position: 30%;
+}
+
+#ray{
+    object-position: 63%;
+
+}
+
+
 
 h1{
     font-family: var(--font-titular);
