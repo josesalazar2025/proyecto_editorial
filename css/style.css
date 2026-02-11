@@ -23,27 +23,27 @@
     --font-color: #ca3737;
     --font-color2:  #f7c973;
     --font-color3: #e64949;
-    --font-precio: rgba(226, 226, 226, 0.913);
+    --font-gris: rgb(150, 148, 148);
 
     --h1-min: 2rem;
-    --h1-ideal: 1.147rem + 3.210vw;
+    --h1-ideal: 1.400rem + 3.000vw;
     --h1-max: 5rem;
 
     --nav-title-min: 2rem;
-    --nav-title-ideal: 1.858rem + 0.535vw;
+    --nav-title-ideal: 1.840rem + 0.800vw;
     --nav-title-max: 2.8rem;
 
     --h2-section-min: 1.4rem;
-    --h2-section-ideal: 1.229rem + 0.642vw;
-    --h2-section-max: 2rem;
+    --h2-section-ideal: 1.240rem + 0.800vw;
+    --h2-section-max: 2.2rem;
 
     --h3-section-min: 1.2rem;
-    --h3-section-ideal: 1.229rem + 0.535vw;
+    --h3-section-ideal: 1.120rem + 0.400vw;
     --h3-section-max: 1.6rem;
 
     
     --p-min: 1rem;
-    --p-ideal: 0.964rem + 0.134vw;
+    --p-ideal: 0.975rem + 0.125vw;
     --p-max: 1.125rem;
     }
 
@@ -52,11 +52,11 @@ body{
     width: 100%;
     min-height: 100vh;
     font-family: var(--font-text);
-    color: var(--font-precio);
+    color: var(--font-gris);
     background-color:var(--bg-color);
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 5vh 65vh 1fr 25vh;
+    grid-template-rows: 5vh 65vh 1fr auto;
     grid-template-areas:
         "navegador"
         "header"
@@ -193,16 +193,17 @@ h2{
     text-justify: auto;
     font-weight: 700;
     font-size: clamp(var(--h2-section-min), var(--h2-section-ideal), var(--h2-section-max));
+    border-bottom: 2px solid #f7c973a9;
 }
 
 
 h3{
-    color: var(--font-color2);
+    color: var(--font-color);
     font-family: var(--font-titular2);
     font-size: clamp(var(--h3-section-min), var(--h3-section-ideal), var(--h3-section-max));
     letter-spacing: 0.1rem;
     text-transform: uppercase;
-    border-bottom: 2px solid var(--font-color2);
+    
     margin-bottom: 0.8rem;
     margin-top: 0.8rem;
 }
@@ -213,7 +214,7 @@ h3{
 main{
     display: grid;
     grid-area: main;
-    width: 90%;
+    width: 100%;
     justify-self: center;
     overflow: hidden;
     margin-bottom: 2.5rem;
@@ -226,6 +227,9 @@ main{
     color: var(--border-color);
 }
 
+#intro>h2, #contenedor-footer>h2{
+    border-bottom: none;
+}
 #intro >p{
     color: rgb(150, 148, 148);
     padding-bottom: 1rem;
@@ -233,11 +237,11 @@ main{
 }
 
 
-/* TOP SELLERS / COLLECTORS*/
+/* TOP SELLERS / COLLECTORS / NOTICIAS*/
 .contenedor, 
 .contenedor-talentos{
     margin-top: 2rem;   
-    max-width: 100%;
+    max-width: 90%;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
@@ -251,13 +255,35 @@ main{
     width: 100%;
 }
 
-.tarjeta-revista, .noticia{
+.tarjeta-revista{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
-    flex: 1 1 5%;
-    min-width: 30vw;
+    flex: 1 1 40%;
+}
+
+.noticia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    flex: 1 1 100%;
+}
+.noticia>h3{
+    order:1;
+}
+
+.noticia>figure{
+    order: 0;
+}
+
+.noticia>p{
+    order:2;
+}
+
+.noticia>button{
+    order:3;
 }
 
 .tarjeta-revista>div{
@@ -266,10 +292,6 @@ main{
     gap: 1.5rem;
 }
 
-.noticia{
-    flex: 1 1 20%;
-    min-width: 50vw;
-}
 
 .tarjeta-revista figure, 
 .noticia figure{
@@ -298,6 +320,10 @@ main{
     
 }
 
+main figure>img{
+    border-radius: 0.5rem;
+}
+
 /*FILTROS PARA IMAGENES-HACER PRUEBAS, NO ME CONVENCEN TANTO*/
 
 /* .tarjeta-revista figure>img {
@@ -311,7 +337,7 @@ main{
 
 .tarjeta-revista figure>img:hover,
 .noticia figure>img:hover{
-    box-shadow: 1px 1px 20px 1px var(--font-color3);
+    box-shadow: 1px 1px 20px 2px var(--font-color3);
     transition: ease 0.7s;
     cursor: pointer;
 }
@@ -323,10 +349,9 @@ main{
     background-color: transparent;
     padding: 0.5rem;
     border: 1px solid var(--border-color);
-    color: var(--font-precio);
+    color: var(--font-gris);
     justify-self: flex-end;
 }
-
 
 #intro>button{
     margin-right: 0.5rem;
@@ -343,13 +368,13 @@ main{
 #intro>button:hover{
     cursor: pointer;
     background-color: var(--bg-color3);
-    color: var(--font-precio);
+    color: rgb(215, 212, 212);
     transition: ease 0.4s;
 }
 
 .tarjeta-revista>div p{
     justify-self: flex-start;
-    color: var(--font-precio);
+    color: var(--font-gris);
     font-weight: 500;
     font-size: 0.8rem;
 }
@@ -364,10 +389,13 @@ main{
 
 
 .noticia p{
-    color: var(--font-precio);
+    color: var(--font-gris);
 }
 
+.noticia>h3{
+    color: var(--border-color);
 
+}
 
 /* CATALOGO */
 .catalogo h3{
@@ -415,7 +443,7 @@ main{
 }
 
 .contacto p{
-    color: var(--font-precio);
+    color: var(--font-gris);
     font-weight: bold;
 }
 
@@ -430,7 +458,7 @@ fieldset{
 }
 
 label{
-    color: var(--font-precio);
+    color: var(--font-gris);
     display: block;
 }
 
@@ -444,15 +472,15 @@ input{
 }
 
 input,textarea{
-    color: var(--font-precio);
+    color: var(--font-gris);
     border: none;
-    border-bottom: 1px solid var(--font-precio);
+    border-bottom: 1px solid var(--font-gris);
     background-color: var(--bg-color);
     margin-bottom: 0.5rem;
 }
 
 textarea{
-    border-left: 1px solid var(--font-precio);
+    border-left: 1px solid var(--font-gris);
     
 }
 
@@ -469,7 +497,7 @@ fieldset button{
 }
 
 fieldset button:hover{
-    color: var(--font-precio);
+    color: var(--font-gris);
     background-color: var(--bg-color3);
 }
 
@@ -533,32 +561,36 @@ iframe{
 
 /*FOOTER*/
 footer{
-    color: var(--font-precio);
+    color: var(--font-gris);
     background-color: #373636;
     grid-area: footer;
     display: grid;
     justify-items: center;
     align-content: center;
     margin-top: 1rem;
-    gap: 3rem;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
 }
 
 #contenedor-footer{
     display: grid;
-    grid-template-columns: auto auto auto;
-    align-items: center;
-    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-items: center;
+    gap: 1.5rem;
+    text-align: center;
 }
 
 #contenedor-footer>h2{
+    grid-column: 1 / -1;
     color: var(--font-color);
     font-family: var(--font-titular);
 }
 
 #contenedor-footer>div h3{
     margin: 0;
-    text-decoration: none;
     border: none;
+    color: #f7c973;
 }
 
 footer ul>li a{
@@ -627,6 +659,15 @@ footer>p{
 
     .talento>div{
         padding-left: 2rem;
+    }
+
+    #contenedor-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        text-align: left;
     }
 
 }
