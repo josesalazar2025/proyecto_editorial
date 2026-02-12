@@ -249,7 +249,6 @@ h3{
     font-size: clamp(var(--h3-section-min), var(--h3-section-ideal), var(--h3-section-max));
     letter-spacing: 0.1rem;
     text-transform: uppercase;
-    
     margin-bottom: 0.8rem;
     margin-top: 0.8rem;
 }
@@ -258,9 +257,7 @@ h3{
 button a{
     color: var(--font-gris-claro);
     text-decoration: none;
-    text-transform: uppercase;
     font-weight: bold;
-
 }
 
 
@@ -538,7 +535,6 @@ button:hover, .boton-enlace:hover{
 
 fieldset{
     border: none;
-    text-transform: uppercase;
 }
 
 label{
@@ -557,10 +553,6 @@ input:focus, textarea:focus{
     box-shadow: 0 0 0 2px #5f5959;
 }
 
-::placeholder{
-    text-transform: uppercase;
-
-}
 
 input,textarea{
     color: var(--font-gris);
@@ -573,6 +565,9 @@ input,textarea{
 
 textarea{
     border-left: 1px solid var(--font-gris-claro);
+    min-width: 80%;
+    max-width: 100%;
+
 }
 
 fieldset button{
@@ -881,14 +876,6 @@ footer>p{
         grid-column: auto;
     }
 
-    /* fieldset{
-    width: 100%
-
-    }
-
-    iframe{
-    width: 100%;
-} */
 
     .contacto section:first-child{
 
