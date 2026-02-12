@@ -1,12 +1,152 @@
-### EDITOLINE
 
-#### Descripción:
+## EDITOLINE
 
-Editoline se trata de una editorial y marketplace de manga que sirve como plataforma para artistas independientes para distribuir sus obras con comisiones de venta mínimas y ofrece a sus usuarios una curaduría basada en la originalidad y habilidades artísticas. Giro de negocio basado en subscripción para material digital y venta para material físico.
+Proyecto web responsive desarrollado como ejercicio de maquetación avanzada utilizando HTML y CSS moderno.
 
-La estética del website se mantiene con fondos oscuros y minimalistas para no distraer al usuario de los productos que tiene alta carga de detalles y color.
+---
+
+## Descripción
+
+EDITOLINE es una web responsive construida desde cero aplicando técnicas avanzadas de CSS como:
+
+- Layout con Grid y Flexbox
+- Tipografía fluida con clamp()
+- Transiciones y transformaciones
+- Scroll Snap
+- Estados interactivos (hover, focus)
+- Enfoque Mobile First
+
+---
+
+El objetivo del proyecto es consolidar la capacidad de maquetación profesional sin el uso de JavaScript.
 
 
+Apostamos por una identidad de marca con corte alternativo que ofrece una plataforma de distribución de ilustraciones y narrativas gráficas para artistas independientes. 
+El giro de negocio 
+La estética del website se mantiene con fondos oscuros y minima intervención de elementos de diseño, centrando el protagonismo en las obras de los artistas. 
+Para favorecer una experiencia de navegación fluida y predecible se mantiene un patrón de diseño  layout consistente en toda la página.
+
+---
+
+## Objetivos del proyecto
+
+- Construir una web completamente responsive.
+- Aplicar buenas prácticas de estructura HTML semántica.
+- Utilizar CSS moderno para crear layouts complejos.
+- Implementar microinteracciones visuales.
+- Mantener un código limpio y organizado.
+
+---
+
+## Tecnologías utilizadas
+
+- HTML5 (semántico)
+- CSS3
+  - Flexbox
+  - CSS Grid
+  - clamp()
+  - Scroll Snap
+  - Transiciones
+  - Transformaciones
+- Git y GitHub para control de versiones (en caso de haberlo usado)
+
+---
+
+## 📂 Estructura del proyecto
+
+/editoline
+│
+├── index.html
+├── css/
+│ └── styles.css
+├── assets/
+│ ├── images/
+│ └── fonts/
+└── README.md
+
+---
+
+Breve explicación de la organización:
+
+- `index.html`: estructura principal del documento.
+- `css/`: hojas de estilo.
+- `assets/`: recursos estáticos.
+
+---
+
+## Responsive Design
+
+El proyecto está desarrollado con enfoque **Mobile First**.
+
+Breakpoints utilizados:
+
+- Mobile: diseño base.
+- Tablet: ajustes de layout.
+- Desktop: distribución avanzada con Grid.
+
+Se han utilizado unidades relativas (`rem`, `%`, `vw`) y tipografía fluida mediante `clamp()` para garantizar escalabilidad.
+
+---
+
+## Decisiones técnicas relevantes
+
+Aquí deben explicar cosas como:
+
+- Por qué se eligió Grid para el layout principal.
+- En qué partes se utilizó Flexbox y por qué.
+- Cómo se resolvió el scroll horizontal con Scroll Snap.
+- Cómo se gestionaron las transformaciones y transiciones.
+- Cómo se abordó la accesibilidad básica (si lo han hecho).
+
+Este apartado es clave para la defensa oral.
+
+---
+
+## Retos encontrados
+
+Explicar brevemente:
+
+- Qué problemas surgieron.
+- Qué soluciones se aplicaron.
+- Qué se aprendió técnicamente.
+
+Este apartado demuestra pensamiento técnico.
+
+---
+
+## Mejoras futuras
+
+Ejemplos:
+
+- Añadir funcionalidad con JavaScript.
+- Optimización de rendimiento.
+- Mejora de accesibilidad.
+- Añadir modo oscuro.
+
+Este apartado demuestra mentalidad profesional.
+
+---
+
+## Demo
+
+Enlace a GitHub Pages / Vercel / Netlify (si está desplegado).
+
+---
+
+## Autores
+
+Nzinga Mbande y José Salazar
+Curso de confección y publicación de páginas web CIFO-La Violeta
+Barcelona, 2026
+
+---
+
+
+
+
+
+
+## USO RESPONSABLE DE IA:
 
 **PROMPT-CHAT GPT:**
 
