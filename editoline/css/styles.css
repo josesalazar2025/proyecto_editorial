@@ -17,6 +17,7 @@
     --font-titular2: "New Amsterdam", sans-serif;
     --bg-color: #262626;
     --bg-color2: rgb(16, 141, 108);
+    --bg-color3: #313131;
     --border-color: rgba(167, 167, 167, 0.758);
     --font-color: #ca3737;
     --font-color2:  #f7c973;
@@ -313,13 +314,13 @@ footer>h2{
     justify-content: center;
     gap: 0.5rem;
     flex: 1 1 40%;
-    background-color: #313131;
+    background-color: var(--bg-color3);
     padding: 0.5rem;
     border-radius: 1rem;
 }
 
 .tarjeta-revista2{
-    background-color: #313131;
+    background-color: var(--bg-color3);
     padding: 0.5rem;
     border-radius: 1rem;
 }
@@ -328,6 +329,7 @@ footer>h2{
     justify-items: center;
     justify-content: flex-start;
     flex: 1 1 100%;
+    color: var(--font-gris-claro);
 
 }
 .noticia>h3{
