@@ -21,10 +21,8 @@ EDITOLINE es una web responsive construida desde cero aplicando técnicas avanza
 El objetivo del proyecto es consolidar la capacidad de maquetación profesional sin el uso de JavaScript.
 
 
-Apostamos por una identidad de marca con corte alternativo que ofrece una plataforma de distribución de ilustraciones y narrativas gráficas para artistas independientes. 
-El giro de negocio 
-La estética del website se mantiene con fondos oscuros y minima intervención de elementos de diseño, centrando el protagonismo en las obras de los artistas. 
-Para favorecer una experiencia de navegación fluida y predecible se mantiene un patrón de diseño  layout consistente en toda la página.
+Apostamos por una identidad de marca con corte alternativo que ofrece una plataforma de distribución de ilustraciones y narrativas gráficas para artistas independientes, siendo este su 
+principal factor diferenciador. 
 
 ---
 
@@ -89,20 +87,31 @@ Se han utilizado unidades relativas (`rem`, `%`, `vw`) y tipografía fluida medi
 ---
 
 ## Decisiones técnicas relevantes
-
-Aquí deben explicar cosas como:
-
-- Por qué se eligió Grid para el layout principal.
-- En qué partes se utilizó Flexbox y por qué.
-- Cómo se resolvió el scroll horizontal con Scroll Snap.
-- Cómo se gestionaron las transformaciones y transiciones.
-- Cómo se abordó la accesibilidad básica (si lo han hecho).
-
-Este apartado es clave para la defensa oral.
-
----
+- Decidimos utilizar GitHub desde el inicio para contar con el control de versiones y poder trabajar comodamente con los aportes de cada uno.
+- Escogimos grid para el layout del body por su versatilidad y facilidad de implementación ese contexto, nos permite ajustar los tamaños
+deseados para cada uno de los componentes y facilita el diseño responsive.
+- Para el menún de navegación optamos por un sticky nav en la parte superior del body con enlaces con aria-label (para marcar el sitio activo) y el nombre de la editorial.
+- Se aplica la técnica del checkbox oculto para el hamburguer menu que se activa durante las vistas tablet y móvil.
+- Para el header se decide aprovecharlo para las revistas destacadas de la editorial (hero). Se implementa el scroll bar horizontal con snap
+al principio de cada imagen y se le dan estilos (incluyendo a Firefox).
+- Para el layout del main se opta por utilizar flex, tanto en sus contenedores como en sus tarjetas para mayor control y separación visual de cada
+sección.
+- El uso de transiciones, transformaciones, hover/focus está bastante controlado y limitado a elementos que lo ameriten y que enriquecieran la experiencia de usuario.
+- Tratamos de mantener presente la accesibilidad/usabilidad en todo momento y se hicieron varias correcciones de contraste/tamaño de tipografías a lo largo del proyecto, se implementaron 
+textos alternativos para los lectores de pantalla, se mantuvo una separación adecuada entre los elementos y secciones, además de un diseño consistente entre todas las páginas de la web.
 
 ## Retos encontrados
+
+Entorno colaborativo:
+Dado que es la segunda vez que trabajamos con GitHub de forma colaborativa, el inicio del proyecto fué un poco desordenado y resultaba en 
+conflictos frecuentes en los PR de cada uno. 
+La solución fué dedicarle más tiempo a la fase de planificación y unificación de criterios, además de repasar un poco el uso de GitHub en la
+terminal.
+
+Layout en el footer:
+Estabamos ya habituados a hacer un footer con simplemente el autor y copyright y optamos por un diseño más completo.
+Hacer que los elementos adoptaran la ubicación deseada y fluyeran con responsive adecuado requirió de varios intentos con grid/flex.
+
 
 Explicar brevemente:
 
