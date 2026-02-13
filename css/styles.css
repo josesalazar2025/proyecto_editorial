@@ -381,7 +381,7 @@ footer>h2{
     bottom: 0;
     align-self: flex-end;
     padding-right: 0.3rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
     text-align: right;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 0px 0px 8px 8px;
@@ -759,8 +759,8 @@ footer>p{
     }
 
     #menu-toggle:checked ~ ul {
-        position: relative;
-        top: auto;
+        position: absolute;
+        top: 100%;
     }
 }
 
