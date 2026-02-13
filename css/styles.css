@@ -44,6 +44,10 @@
     --p-min: 1rem;
     --p-ideal: 0.975rem + 0.125vw;
     --p-max: 1.125rem;
+
+    --cite-min: 0.8rem;
+    --cite-ideal: 0.76rem +0.200vw;
+    --cite-max: 1rem;
     }
 
 
@@ -55,7 +59,7 @@ body{
     background-color:var(--bg-color);
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 5vh 65vh 1fr auto;
+    grid-template-rows: 6vh 65vh 1fr auto;
     grid-template-areas:
         "navegador"
         "header"
@@ -218,7 +222,7 @@ nav label.material-symbols-outlined{
 cite{
     color: var(--font-gris-claro);
     font-style: normal;
-    font-size: var(--font-text);
+    font-size: var(--cite-min, --cite-ideal, --cite-max);
 }
 
 p{
@@ -527,6 +531,7 @@ button:hover,
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding-left: 0.5rem;
     border-left: 2px solid var(--font-color2);
 }
 
@@ -535,9 +540,14 @@ button:hover,
     border-left: none;
 }
 
+.tarjeta-revista2 >div{
+    width: 100%;
+}
+
 .tarjeta-revista2 > section > div > div:last-child{
     text-align: right;
     padding-right: 0.5rem;
+    width: 43%;
 }
 
 .tarjeta-revista2 div p,
@@ -545,8 +555,7 @@ button:hover,
     color: var(--font-gris-claro);
     margin-bottom: 0.2rem;
     text-align: left;
-    padding-left: 0.5rem;
-    font-size: 0.8rem;
+    font-size: var(--cite-min, --cite-ideal, --cite-max);
 }
 
 .tarjeta-revista2 > section > div > div:last-child p{
@@ -554,18 +563,18 @@ button:hover,
 }
 
 .tarjeta-revista2 div cite{
-    font-size: 1rem;
+    font-size: var(--cite-min, --cite-ideal, --cite-max);
     font-weight: 700;
 }
 
-
-
-
-
 .tarjeta-revista2 div button{
-    width:48%;
+    max-width:48%;
 }
 
+.tarjeta-revista2{
+    display: flex;
+    flex-direction: column;
+}
 
 /* CONTACTO FORM /INPUTS */
 
@@ -850,14 +859,27 @@ footer>p{
         margin-bottom: 2rem;
     }
 
+    .top .tarjeta-revista{
+        flex: 1 1 10%;
+    }
+
     .tarjeta-revista, .noticia{
         max-width: 30%;
         flex: 1 1 10%;
         margin-bottom: 3rem;
     }
 
+    .trending .tarjeta-revista{
+        flex: 1 1 25%;
+    }
+
     .tarjeta-revista{
         min-width: 200px;
+    }
+
+    .tarjeta-revista2{
+        min-width: 20%;
+        flex: 1 1 20%;
     }
 
     .noticia{
